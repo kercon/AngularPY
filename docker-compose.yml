@@ -1,0 +1,13 @@
+version: "3"
+services:
+  web:
+    image: kercon/angularpy:ubuntumongo
+    ports:
+      - "80:80"
+      - "27017:27017"
+    volumes:
+      - ./app:/app
+    networks:
+      - webnet
+networks:
+  webnet:
