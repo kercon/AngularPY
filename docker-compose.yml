@@ -1,13 +1,18 @@
 version: "3"
 services:
   web:
-    image: kercon/angularpy:ubuntumongo
+    image: kercon/angularpy:latest
     ports:
       - "80:80"
-      - "27017:27017"
     volumes:
       - ./app:/app
     networks:
+      - webnet
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks: 
       - webnet
 networks:
   webnet:

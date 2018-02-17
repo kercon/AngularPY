@@ -14,4 +14,4 @@ RUN mkdir -p /data/db /data/configdb \
 VOLUME /data/db /data/configdb /app
 EXPOSE 80 27017
 ENV NAME World
-CMD ["mongod", "python", "app.py"]
+CMD ["python", "app.py"]
